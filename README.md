@@ -1,11 +1,11 @@
 # How this works
 
-	Summit schools grade projects (worth 70% of the overall grade) in a weird way.
+   Summit schools grade projects (worth 70% of the overall grade) in a weird way.
 Each final product (checkpoints do not count for grades) is graded on several points, known as cognitive skills or rubric dimensions.
 The highest score given for each cognitive skill/rubric dimension in a given class is the overall cognitive skill.
 the average of all overall skills becomes the overall grade for the unit.
 
-	This system makes some projects (ones that have a lot of skill you dont have a good grade in) much more important to overall grades.
+   This system makes some projects (ones that have a lot of skill you dont have a good grade in) much more important to overall grades.
 This program find combination of products that provide the best grade with minimum effort.
 
 # System requirements
