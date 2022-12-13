@@ -54,7 +54,7 @@ This is an snippet of what the output will look like:
         76%     83%     https://www.summitlearning.org/my/projects/1792525/     Illustation
         100%    100%    https://www.summitlearning.org/my/projects/1815604/     Human proportion
 ```
-The columns are: **% skill average** if all projects before and including this one are compleated, The **overall grade** if you do so, The URL of the project, The **Name** of the project.
+The columns are: **% skill average** if all projects before and including this one are compleated, The **overall grade** if you do so, The **URL** of the project, The **Name** of the project.
 
 If you do just these 3 projects (out of 7!) you will get 100% on projects, for a *minimum* of 70% on your transcript. 
 This will be the case even if you get a **0** (You must submit something, but the grade does not matter) on all other projects.
