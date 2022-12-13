@@ -1,4 +1,6 @@
 import requests
+import tqdm
+import sys
 import json
 
 class Project:
@@ -23,6 +25,12 @@ class Year:
     def get_courses(self):
         return self.d["courses"]
 
+    def get_project_dict(self):
+        db = {}
+        for proj in self.d["projects"]:
+            db[proj["id"]] = proj
+        return db
+
 class API:
     def __init__(self, token):
         self.auth = token
@@ -45,17 +53,24 @@ class API:
         d = self.get_project_json(projectid)
         return Project(d)
 
+if len(sys.argv) == 1:
+    print("Please pass the year for which information sould be fetched as an argument")
+    exit(1)
+
+year = sys.argv[1]
+
 api = API(open("cookie").read())
 
 data = {}
-import tqdm
-for course in api.get_year(2023).get_courses():
+year = api.get_year(year)
+projects = year.get_project_dict()
+for course in year.get_courses():
     c_name = course["name"]
     data[c_name] = {}
-    for projectid in tqdm.tqdm(course["projectIds"]):
-        data[c_name][projectid] = []
-        for skill in api.get_project(projectid).get_skills():
-            data[c_name][projectid].append(skill)
+    for projectid in course["projectIds"]:
+        data[c_name][projectid] = {}
+        data[c_name][projectid]["name"] = projects[projectid]["name"]
+        data[c_name][projectid]["skills"] = projects[projectid]["rubricDimensionIds"]
 
 open("data.json",'w').write(json.dumps(data))
 
