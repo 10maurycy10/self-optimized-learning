@@ -20,7 +20,7 @@ You must also have the required dependency's installed. This can be done by runn
 
 ## Obtaining your cookie
 
-    Your browsers cookies are small text files used by servers to keep track of devices for authentication purposes.
+Your browsers cookies are small text files used by servers to keep track of devices for authentication purposes.
 To allow this program to see your platform, you must obtain your cookie string (**DO NOT SHARE THIS WITH OTHERS (even me), IT WILL GIVE THEM ACCESS TO YOUR ACCOUNT**).
 
 1. Go any page on the platform.
