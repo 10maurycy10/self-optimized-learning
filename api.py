@@ -36,7 +36,7 @@ class API:
         self.auth = token
 
     def get_project_json(self, projectid):
-        r = requests.get(f"https://www.summitlearning.org/my/projects/{projectid}/overview.json", headers={"cookie": self.auth})
+        r = requests.get(f"https://www.summitlearning.org/my/projects/{projectid}/overview.json", headers={"cookie": self.auth.rstrip()})
         r.raise_for_status()
         return json.loads(r.content)
 
